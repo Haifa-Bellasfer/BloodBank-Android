@@ -1,0 +1,114 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:focusableInTouchMode="true"
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        style="@style/viewParent"
+        android:layout_marginTop="70dp"
+        android:text="Register"
+        android:layout_marginBottom="50dp"
+        android:textSize="@dimen/headerTextSize"
+        android:textColor="@color/blackTextColor"
+        android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/firstname"
+            style="@style/modifiedEditText"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="Prénom"/>
+        <EditText
+            android:id="@+id/lastname"
+            style="@style/modifiedEditText"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="Nom"/>
+
+
+        <EditText
+            android:id="@+id/mail"
+            style="@style/modifiedEditText"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="E-mail"/>
+
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/modifiedEditText"
+            android:hint="password"
+            android:maxLines="1"
+            android:inputType="textPassword"/>
+    <Spinner
+        android:id="@+id/ville"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/city"/>
+        <EditText
+            android:id="@+id/tel"
+            style="@style/modifiedEditText"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:hint="Téléphone"/>
+        <EditText
+            android:id="@+id/age"
+            style="@style/modifiedEditText"
+            android:inputType="number"
+            android:maxLines="1"
+            android:hint="Age"/>
+
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/type"/>
+
+
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_login_button"
+        android:layout_gravity="right"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/facebook_button" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/google_button" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

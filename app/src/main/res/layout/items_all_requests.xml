@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="385dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00FFFFFF" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/carte_annonce_round"
+        android:weightSum="13">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/request_image_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_marginLeft="10dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/request_image_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/request_image_user"
+                app:layout_constraintTop_toTopOf="@+id/request_image_user"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:id="@+id/request_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:lines="1"
+                    android:text="test"
+                    android:textColor="@color/black_alpha_75"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/request_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:lines="1"
+                    android:text="15/02/2019"
+                    android:textColor="@color/black_alpha_75"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/All_request_btn_donate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/adddonation"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/request_layout_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:background="@drawable/ic_req"
+            android:layout_weight="9"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/request_titre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Blood Type"
+                    android:textColor="@color/black_alpha_75"
+                    android:textSize="22sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/request_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:paddingEnd="15dp"
+                    android:text="hbskjbfksjbksjbsek"
+                    android:textAlignment="viewStart"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:typeface="sans"
+                    android:paddingRight="15dp"
+                    android:gravity="start" />
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#00FFFFFF" />
+
+</LinearLayout>

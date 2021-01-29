@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_acc"
+        android:icon="@drawable/home"
+        android:title="home">
+
+    </item>
+    <item
+        android:id="@+id/action_requests"
+        android:icon="@drawable/bloodreq"
+        android:title="blood_requests">
+
+    </item>
+    <item
+        android:id="@+id/action_donors"
+        android:icon="@drawable/blooddrop"
+        android:title="@string/blood_donors">
+
+    </item>
+
+    <item
+        android:id="@+id/action_menu"
+        android:icon="@drawable/menu"
+        android:title="menu">
+
+    </item>
+
+
+
+
+
+
+
+</menu>

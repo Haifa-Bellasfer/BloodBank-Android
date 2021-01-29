@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00FFFFFF" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:background="@drawable/carte_annonce_round"
+        android:weightSum="4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/donation_annonce_image_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_marginLeft="10dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/rating4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/top"
+                android:visibility="gone"
+
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="Suspicious0dp">
+
+
+
+                    <TextView
+                        android:id="@+id/donation_annonce_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:lines="1"
+                        android:text="Moez Ben Yahya"
+                        android:textColor="@color/df_red"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/donation_annonce_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:lines="1"
+                        android:text="15/02/2019"
+                        android:textColor="@color/df_red"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="Suspicious0dp">
+                    <ImageView
+                        android:id="@+id/call2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                       android:layout_marginRight="20dp"
+android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@drawable/phones"
+                       >
+
+                    </ImageView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                android:layout_gravity=""
+
+                android:layout_marginLeft="10dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/rating1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"
+                    android:src="@drawable/favourites"
+
+                    android:layout_marginLeft="10dp" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/rating2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"
+                    android:src="@drawable/favourites"
+
+                    android:layout_marginLeft="10dp" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/rating3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/favourites"
+                    android:layout_marginLeft="10dp" />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#00FFFFFF" />
+
+</LinearLayout>

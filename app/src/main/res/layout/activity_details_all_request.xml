@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".DetailsAllRequest">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/header"
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:elevation="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/ActivityTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:lines="1"
+        android:text="Detail item"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="30sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile_button_back"
+        android:layout_width="34dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:onClick="goBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        android:layout_marginLeft="16dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/header"
+    app:layout_constraintTop_toBottomOf="@+id/header">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/detail_annonce_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/ic_req"
+
+                android:gravity="bottom"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal">
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="@+id/detail_annonce_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_annonce_image">
+
+                <ImageView
+                    android:onClick="call"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+
+                    android:layout_weight="1"
+                    android:src="@drawable/phones"></ImageView>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/headerinfo2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@android:color/background_light"
+                android:elevation="1dp"
+                android:layout_marginHorizontal="20dp"
+
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linear_phone"
+                app:layout_constraintStart_toStartOf="@+id/linear_phone"
+                app:layout_constraintTop_toBottomOf="@+id/linear_phone">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+
+                    android:gravity="left"
+                    android:background="#BDBDBD"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Information"
+                        android:textSize="24sp"
+
+                        android:typeface="sans"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/detail_annonce_Layout_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/background_light"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerinfo2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Donation For"
+                        android:textColor="@color/black_alpha_75"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/detail_annonce_titre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:paddingEnd="20dp"
+
+                        android:text="Annonce 1"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/df_red"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:paddingRight="20dp"
+                        android:gravity="start" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Blood Typed Needed "
+                        android:textColor="@color/black_alpha_75"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/detail_annonce_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:paddingEnd="20dp"
+                        android:text="Money collect"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/df_red"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:paddingRight="20dp"
+                        android:gravity="start" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Description"
+                        android:textColor="@color/black_alpha_75"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/detail_annonce_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:minLines="1"
+                        android:paddingEnd="20dp"
+                        android:text="qlkffnsdlfnsldknvsdnv dffnbldfknblrsfkn sdnvlrsknv nrsbnsril \nqsojcfesojnvposdjvpoisrdv,sdov,sopmv,dsv,sdkn,vmmdsmvnsd,vsksdn,lsdkv,sldknvsldk,mmdskvnsdlkmlskdnvds"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/df_red"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:paddingRight="20dp"
+                        android:gravity="start" />
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/detail_request_frame_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/map">
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
